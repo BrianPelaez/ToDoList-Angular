@@ -1,7 +1,8 @@
 .task {
+    display: flex;
     background-color: #f4f4f4;
     margin: 5px;
-    padding: 10px 20px;
+    padding: 10px 10px 10px 0;
     cursor: pointer;
 }
 
@@ -13,4 +14,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.details{
+    width: 100%;
+}
+
+.id {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75em;
+    width: 40px;
+    padding: 0;
+    margin: 0;
 }
