@@ -1,4 +1,9 @@
-<app-task-item *ngFor="let task of tasks" [task]="task" (iconDelete)="deleteTask(task.id || 0)">
-    {{task.text}}
+<app-add-task (onAddTask)="addTask($event)"></app-add-task>
+<app-task-item
+  *ngFor="let task of tasks"
+  [task]="task"
+  (onDeleteTask)="deleteTask(task)"
+  (onToggleTask)="toggleTask(task)"
+>
+  {{ task.text }}
 </app-task-item>
-<app-button text="Crear nueva tarea" color="green"></app-button>

@@ -5,28 +5,34 @@ import { Task } from 'src/app/Task';
 @Component({
   selector: 'app-tasks',
   templateUrl: './tasks.component.html',
-  styleUrls: ['./tasks.component.css']
+  styleUrls: ['./tasks.component.css'],
 })
 export class TasksComponent implements OnInit {
-
   tasks: Task[] = [];
-  
 
-  constructor(private taskService: TaskService) { }
+  constructor(private taskService: TaskService) {}
 
   ngOnInit(): void {
-     
     this.taskService.getTasks().subscribe((tasks) => {
       this.tasks = tasks;
-  
     }); // Promise
   }
 
-  deleteTask(id: number): void {
-    this.taskService.deleteTask(id).subscribe();
-    location.reload();
-    console.log("borrando")
+  deleteTask(task: Task): void {
+    this.taskService.deleteTask(task).subscribe(() => {
+      this.tasks = this.tasks.filter((e) => e.id !== task.id);
+    });
   }
 
+  toggleTask(task: Task): void {
+    task.reminder = !task.reminder;
+    this.taskService.updateTaskReminder(task).subscribe();
+  }
 
+  addTask(task: Task) {
+    this.taskService.addTask(task).subscribe((task) => {
+      this.tasks.push(task);
+    });
+    
+  }
 }

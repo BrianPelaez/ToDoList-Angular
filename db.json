@@ -1,40 +1,46 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "text": "Terminar primer modulo de Angular",
-      "day": "Agosto 5 a las 12:00",
-      "reminder": true
-    },
-    {
       "id": 2,
-      "text": "Terminar segundo modulo de Angular",
-      "day": "Septiembre 7 a las 12:00",
-      "reminder": true
-    },
-    {
-      "id": 521,
       "text": "Terminar primer modulo de Angular",
       "day": "Agosto 5 a las 12:00",
       "reminder": true
     },
     {
-      "id": 52,
+      "id": 3,
       "text": "Terminar primer modulo de Angular",
       "day": "Agosto 5 a las 12:00",
       "reminder": true
     },
     {
-      "id": 33,
+      "id": 4,
       "text": "Terminar primer modulo de Angular",
       "day": "Agosto 5 a las 12:00",
-      "reminder": true
+      "reminder": false
     },
     {
-      "id": 12,
+      "id": 5,
       "text": "Terminar primer modulo de Angular",
       "day": "Agosto 5 a las 12:00",
-      "reminder": true
+      "reminder": false
+    },
+    {
+      "id": 7,
+      "text": "Terminar primer modulo de Angular",
+      "day": "Agosto 5 a las 12:00",
+      "reminder": false
+    },
+    {
+      "text": "Sacar al perro",
+      "day": "Miercoles 13 a las 11:00",
+      "reminder": true,
+      "id": 8
+    },
+    {
+      "text": "Prueba",
+      "day": "23 Miercoles",
+      "reminder": false,
+      "id": 9
     }
   ]
 }
